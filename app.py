@@ -47,7 +47,7 @@ def addProduct():
     db.session.add(createdProduct)
     db.session.commit()
 
-    return productSchema.jsonify(newProduct)
+    return productSchema.jsonify(createdProduct)
 
 # Get all products
 @app.route("/product", methods=["GET"])
